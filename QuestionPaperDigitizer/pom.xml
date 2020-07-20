@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>QuestionPaperDigitization</groupId>
+  <artifactId>QuestionPaperDigitization</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>QuestionPaperDigitization</name>
+  <description>QuestionPaperDigitization</description>
+  
+  
+  
+  <dependencies>
+  
+   <dependency>
+    <groupId>net.sourceforge.tess4j</groupId>
+    <artifactId>tess4j</artifactId>
+    <version>4.5.1</version>
+   </dependency>
+  
+  
+   <dependency>
+        <groupId>org.mongodb</groupId>
+        <artifactId>mongodb-driver-sync</artifactId>
+        <version>4.0.4</version>
+   </dependency>
+   
+   
+   <dependency>
+        <groupId>com.jfinal</groupId>
+        <artifactId>cos</artifactId>
+        <version>2020.4</version>
+   </dependency>
+   
+   
+   <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+   </dependency>
+   
+   
+   <dependency>
+	<groupId>taglibs</groupId>
+	<artifactId>standard</artifactId>
+	<version>1.1.2</version>
+   </dependency>
+   
+   
+   <dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>4.1.2</version>
+   </dependency>
+   
+   
+   <dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-all</artifactId>
+    <version>1.10.19</version>
+    <scope>test</scope>
+   </dependency>
+    
+    
+    
+    <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
+    </dependency>
+   
+   
+   </dependencies>
+
+   
+  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>14</release>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+        <configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

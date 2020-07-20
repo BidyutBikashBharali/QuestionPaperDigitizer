@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+
+
+
+<style>
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<header class="w3-panel w3-center w3-opacity" style="padding:20px 16px">
+  <b class="w3-xxxlarge w3-text-blue">welcome</b>
+  <p class="w3-large">Digitize Your Hard Copy Question Paper into a Web Form Automatically</p>
+  
+  <div class="w3-padding-32">
+    <div class="w3-bar w3-border">
+      <a href="Search" class="w3-bar-item w3-button">Search</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-light-grey">Home</a>
+      <a href="About" class="w3-bar-item w3-button">About</a>
+    </div>
+  </div>
+</header><br><br>
+
+<!-- Start  Content -->
+<div class="w3-padding-large" style="margin-bottom:128px">
+  
+
+<center>
+ <form id="urlform" method="post" action="OCRE" enctype="multipart/form-data" style="width:70%;">
+
+  <div class="control-group after-add-more w3-padding">
+
+    <input class="w3-input" placeholder="Enter image url" type="url" name="url" pattern="https://.*" required>
+    <br>
+
+  </div>
+
+ </form><br><br>
+ <button class="w3-button w3-hover-white add-more"><i class='fas fa-plus-circle w3-text-blue' style='font-size:22px'></i></button>
+ <br>
+  <center><button form="urlform" class="w3-button w3-round w3-blue" >Submit</button></center>
+</center>
+
+
+
+
+<div class="copy w3-hide">
+
+  <div class="control-group w3-padding">
+
+    <input class="w3-input" placeholder="Enter image url" type="url" name="url" pattern="https://.*" required>
+    <button class="w3-button w3-hover-white remove w3-right"><i class='w3-large fas fa-minus-circle w3-text-red' style='font-size:22px'></i></button>
+
+    
+  </div>
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+
+      $(".add-more").click(function(){ 
+
+          var html = $(".copy").html();
+
+          $(".after-add-more").after(html);
+
+      });
+
+
+      $("body").on("click",".remove",function(){ 
+
+          $(this).parents(".control-group").remove();
+
+      });
+
+
+    });
+</script>
+
+
+
+
+
+
+
+
+<br><br>
+<center>
+
+  <p class="w3-large w3-text-gray">OR</p>
+<br><br>
+
+
+
+  <form  method="post" action="OCRE" enctype="multipart/form-data" style="width:70%">
+ 
+    <div id="file-js-example" class="file has-name is-centered is-boxed">
+      <label class="file-label">
+
+        <input class="file-input" type="file" name="file" accept="image/*" style="display:none;" multiple/>
+
+        <span class="file-cta">
+          <center>
+         <div class="w3-padding-32 w3-border ">
+        <span class="file-icon"><img  src="https://png.pngtree.com/png-vector/20191129/ourlarge/pngtree-image-upload-icon-photo-upload-icon-png-image_2047545.jpg" alt="lgo"  style="width:180px; height:180px;"/></span><br>
+        <span class="file-name w3-large w3-text-gray"><b>Choose an image</b></span>
+        </div>
+      </center>
+        </span>
+      </label>
+    </div>
+    <script>
+      const fileInput = document.querySelector('#file-js-example input[type=file]');
+      fileInput.onchange = () => {
+        if (fileInput.files.length > 0) {
+          const fileName = document.querySelector('#file-js-example .file-name');
+          if(fileInput.files.length == 1){
+            fileName.textContent = fileInput.files.length + "  file selected" ;
+          }
+          else{
+            fileName.textContent = fileInput.files.length  + " files selected" ;
+          }
+                      
+        }
+      }
+    </script>
+    <br></br>
+      <center><input type="submit" class="w3-button w3-round w3-blue" value="Submit"></center>
+
+ </form>
+
+</center>
+<!-- End Page Content -->
+
+
+
+</div>
+
+
+
+
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center"> 
+ <p>Thank You for visiting our website</p>
+  <p>Connect with us on</p>
+  <div class="w3-large">
+  <i class='fab fa-facebook w3-text-blue' style='font-size:25px;'></i>&nbsp;&nbsp;&nbsp;
+  <i class='fab fa-instagram w3-text-pink' style='font-size:25px;'></i>&nbsp;&nbsp;&nbsp;
+  <i class='fab fa-snapchat w3-text-amber' style='font-size:25px;'></i>&nbsp;&nbsp;&nbsp;
+  <i class='fab fa-twitter w3-text-blue' style='font-size:25px;'></i>&nbsp;&nbsp;&nbsp;
+  <i class='fab fa-pinterest w3-text-red' style='font-size:25px;'></i>&nbsp;&nbsp;&nbsp;
+  <i class='fab fa-linkedin w3-text-indigo' style='font-size:25px;'></i>
+  </div>
+ 
+</footer>
+
+
+
+
+</body>
+</html>
+    
